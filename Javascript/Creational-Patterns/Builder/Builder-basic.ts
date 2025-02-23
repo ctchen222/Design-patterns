@@ -21,6 +21,7 @@ export class ComputerBuilder extends Computer {
 
     constructor() {
         super()
+        this.computer = new Computer()
     }
 
     setCPU(cpu: string) {
