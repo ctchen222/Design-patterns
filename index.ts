@@ -1,13 +1,14 @@
-import { BurgerFactory } from "./Javascript/Factory/Factory-basic";
-import { TaxCalculatorFactory } from "./Javascript/Factory/TaxFactory";
-import { TaxCalculatorFactoryWithStrategy } from "./Javascript/Factory/TaxFactoryWIthStrategy";
+import { BurgerFactory } from "./Javascript/Creational-Patterns/Factory/Factory-basic";
+import { TaxCalculatorFactory } from "./Javascript/Creational-Patterns/Factory/TaxFactory";
+import { TaxCalculatorFactoryWithStrategy } from "./Javascript/Creational-Patterns/Factory/TaxFactoryWIthStrategy";
 import {
   CarFactory,
   MotorcycleFactory,
-} from "./Javascript/AbstractFactory/absctract-factory";
-import { Client } from "./Javascript/AbstractFactory/absctract-factory";
-import { ComputerBuilder } from "./Javascript/Builder/Builder-basic";
-import { Director } from "./Javascript/Builder/Builder-director";
+} from "./Javascript/Creational-Patterns/AbstractFactory/absctract-factory";
+import { Client } from "./Javascript/Creational-Patterns/AbstractFactory/absctract-factory";
+import { ComputerBuilder } from "./Javascript/Creational-Patterns/Builder/Builder-basic";
+import { Director } from "./Javascript/Creational-Patterns/Builder/Builder-director";
+import { MediaFacade } from "./Javascript/Structural Patterns/Facade/facade";
 
 // Factory basic
 const burgurFactory = new BurgerFactory();
@@ -48,3 +49,8 @@ console.log(highendComputer.toString())
 const budgetBuilder = new ComputerBuilder()
 const budgetComputer = Director.createBudgetComputer(budgetBuilder)
 console.log(budgetComputer.toString())
+
+// Facade
+const mediaFacade = new MediaFacade() 
+mediaFacade.play()
+mediaFacade.turnOffNotification()

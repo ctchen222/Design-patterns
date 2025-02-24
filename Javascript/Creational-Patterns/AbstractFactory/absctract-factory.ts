@@ -1,4 +1,3 @@
-// 1. 抽象產品（Car 和 Motorcycle）
 abstract class Car {
   abstract drive(): void
 }
