@@ -8,6 +8,8 @@ import (
 	builder "github.com/ctchen1999/design-patterns/Creational_Patterns/Builder"
 	factory "github.com/ctchen1999/design-patterns/Creational_Patterns/Factory"
 	"github.com/ctchen1999/design-patterns/Creational_Patterns/Singleton"
+	adaptor "github.com/ctchen1999/design-patterns/Structural_Patterns/Adaptor"
+	facade "github.com/ctchen1999/design-patterns/Structural_Patterns/Facade"
 )
 
 func main() {
@@ -70,4 +72,29 @@ func main() {
 	normalHouse.PrintHouse()
 	iglooHouse.PrintHouse()
 	fmt.Println("[Builder Done]")
+
+	fmt.Println("[Adaptor Start]")
+	paypal := &adaptor.PayPal{}
+	paypal.Pay(1000)
+	stripe := &adaptor.Stripe{}
+	stripeAdaptor := &adaptor.StripeAdaptor{
+		StripeService: stripe,
+	}
+	stripeAdaptor.Pay(2000)
+	fmt.Println("[Adaptor Done]")
+
+	fmt.Println("[Adaptor Start]")
+	oldHttpClient := &adaptor.OldHttpClient{}
+	oldHttpClientAdaptor := &adaptor.OldHttpClientAdaptor{
+		Client: oldHttpClient,
+	}
+	response := oldHttpClientAdaptor.Get("http://www.google.com")
+	fmt.Println(response)
+	fmt.Println("[Adaptor Done]")
+
+	fmt.Println("[Facade Start]")
+	mediaFacade := facade.NewMediaFacade()
+	mediaFacade.Play()
+	fmt.Println("[Facade Done]")
+
 }
