@@ -57,7 +57,7 @@ func newMusket() IGun {
 }
 
 func GunFactory(gunType string) (IGun, error) {
-	if gunFactory, exists := factoryStrategy[gunType]; exists {
+	if gunFactory, exists := gunFactoryStrategy[gunType]; exists {
 		return gunFactory()
 	}
 	return nil, fmt.Errorf("Wrong gun type passed")

@@ -6,8 +6,8 @@ import (
 
 	"github.com/ctchen1999/design-patterns/Creational_Patterns/Abstract_Factory"
 	builder "github.com/ctchen1999/design-patterns/Creational_Patterns/Builder"
+	factory "github.com/ctchen1999/design-patterns/Creational_Patterns/Factory"
 	"github.com/ctchen1999/design-patterns/Creational_Patterns/Singleton"
-	"github.com/ctchen1999/design-patterns/Creational_Patterns/factory"
 )
 
 func main() {
@@ -38,6 +38,12 @@ func main() {
 	musket, _ := factory.GunFactory("musket")
 	factory.PrintDetailed(ak47)
 	factory.PrintDetailed(musket)
+	fmt.Println("[Factory Done]")
+
+	fmt.Println("[Factory Start]")
+	animal, _ := factory.AnimalFactory("dog")
+	speak := animal.Speak()
+	fmt.Println(speak)
 	fmt.Println("[Factory Done]")
 
 	fmt.Println("[Abstract Factory Start]")
