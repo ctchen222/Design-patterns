@@ -16,6 +16,11 @@ func (m *MediaFacade) Play() {
 	m.Video.setResolution(1440, 1440)
 }
 
+func (m *MediaFacade) TureOffNotification() {
+	fmt.Println("[Facade] >>> Turn off notification")
+	m.Notification.setNotification(false)
+}
+
 func NewMediaFacade() *MediaFacade {
 	return &MediaFacade{
 		Audio:        newAudioSystem(),
@@ -73,7 +78,7 @@ type NotificationSystem struct {
 }
 
 func (n *NotificationSystem) setNotification(notification bool) {
-	fmt.Printf("Notification set to %d\n", notification)
+	fmt.Printf("Notification set to %t\n", notification)
 	n.receivedNotification = notification
 }
 
