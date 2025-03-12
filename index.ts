@@ -12,9 +12,10 @@ import { MediaFacade } from "./Javascript/Structural Patterns/Facade/facade";
 import { OldPaymentSystem, PaymentSystemAdaptor } from './Javascript/Structural Patterns/Adaptor/adaptor';
 import { HttpClientAdaptor, OldHttpClient } from './Javascript/Structural Patterns/Adaptor/adaptor-exI';
 import { MilkDecorator, SimpleCoffee, SugarDecorator } from "./Javascript/Structural Patterns/Decorator/decorator";
-import { APIProxy, type APIService } from "./Javascript/Structural Patterns/Proxy/proxy";
+import { APIProxy, type APIService } from "./Javascript/Structural Patterns/Proxy/proxy-exI";
 import { NewsAgency, Subscriber } from "./Javascript/Behavioral Patterns/Observer/observer";
 import { LinePayPayment, CreditCartPayment, PaymentContext, PaypalPayment } from "./Javascript/Behavioral Patterns/Strategy/strategy";
+import { ProxyService, type Service } from "./Javascript/Structural Patterns/Proxy/proxy-exII";
 
 // Factory basic
 const burgurFactory = new BurgerFactory();
@@ -86,6 +87,12 @@ apiService.request("/test")
 // setTimeout(() => {
 //   apiService.request("/test")
 // }, 3100);
+
+// Proxy
+const proxyServer: Service = new ProxyService()
+proxyServer.request("admin")
+proxyServer.request("user1")
+proxyServer.request("user2")
 
 // Observer
 const agency = new NewsAgency()
