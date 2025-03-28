@@ -77,4 +77,3 @@ If you have any questions or suggestions, feel free to contact me at
 ## References
 (1) [Design Patterns in TypeScript](https://refactoring.guru/design-patterns/typescript)  
 (2) [Design Patterns in Go](https://refactoring.guru/design-patterns/go)
-```
