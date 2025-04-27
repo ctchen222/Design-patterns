@@ -6,6 +6,6 @@ var gunFactoryStrategy = map[string]func() (IGun, error){
 }
 
 var animalFactoryStrategy = map[string]func() (IAnimal, error){
-	"dog": func() (IAnimal, error) { return newDot(), nil },
+	"dog": func() (IAnimal, error) { return newDog(), nil },
 	"cat": func() (IAnimal, error) { return newCat(), nil },
 }

@@ -12,7 +12,7 @@ func (d *dog) Speak() string {
 	return "Woof!"
 }
 
-func newDot() IAnimal {
+func newDog() IAnimal {
 	return &dog{}
 }
 

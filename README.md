@@ -62,7 +62,7 @@ I tried to write the best code I can, but I always find myself writing the same 
 I found that many software engineers find design patterns unnecessary, I agree with them to some extent.
 Design patterns may not be the best solution for every problem, but they give you a taste of how to solve a problem in a structured way.
 
-As I try to implement the design patterns in this repo and understand different opne-source projects, I found that design patterns are useful in many cases.
+As I try to implement the design patterns in this repo and understand different open-source projects, I found that design patterns are useful in many cases.
 
 I think it's not about using design patterns in every module of your code, but I always find it useful when I'm trying to build something 
 maintainable, scalable, and testable.

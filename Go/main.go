@@ -47,9 +47,12 @@ func main() {
 	fmt.Println("[Factory Done]")
 
 	fmt.Println("[Factory Start]")
-	animal, _ := factory.AnimalFactory("dog")
-	speak := animal.Speak()
-	fmt.Println(speak)
+	dog, _ := factory.AnimalFactory("dog")
+	dogSpeak := dog.Speak()
+	cat, _ := factory.AnimalFactory("cat")
+	catSpeak := cat.Speak()
+	fmt.Println(dogSpeak)
+	fmt.Println(catSpeak)
 	fmt.Println("[Factory Done]")
 
 	fmt.Println("[Abstract Factory Start]")

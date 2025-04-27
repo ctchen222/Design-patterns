@@ -9,6 +9,7 @@ type Service interface {
 type RealService struct{}
 
 func (r *RealService) Request(user string) {
+	fmt.Printf("ProxyService: Receive %s request\n", user)
 	fmt.Printf("RealService: Handle %s request\n", user)
 }
 
